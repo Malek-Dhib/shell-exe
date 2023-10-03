@@ -3,10 +3,10 @@ if [ $# -ne 2 ]; then
     exit 1
 fi
 
-nouveau_fichier="$1"
-contenu_fichier="$2"
+copier_fichier="$1"
+coller_fichier="$2"
 
-cat $contenu_fichier > $nouveau_fichier
+cp $1 $2
 
 if [ $? -eq 0 ]; then
     echo "Le contenu du fichier source a été copié dans le nouveau fichier : $nouveau_fichier"
